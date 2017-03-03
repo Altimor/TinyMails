@@ -1,0 +1,22 @@
+{
+  "name": "TinyMails",
+  "description": "Aims at encouraging brevity in correspondence, by showing the character count of the currently typed email in Gmail.",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": ["inboxsdk.js","main.js", "jquery.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {"128": "icon.png"},
+  "permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/"
+  ],
+  "manifest_version": 2
+}
